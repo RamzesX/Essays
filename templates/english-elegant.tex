@@ -1,0 +1,156 @@
+% Elegant template for philosophical-religious essays in English
+\documentclass[12pt,a4paper]{article}
+
+% XeLaTeX/LuaLaTeX support
+\usepackage{ifxetex,ifluatex}
+\ifxetex
+  \usepackage{fontspec}
+  \usepackage{xunicode}
+\else\ifluatex
+  \usepackage{fontspec}
+\else
+  % For pdfLaTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi\fi
+
+% Language
+\usepackage[english]{babel}
+
+% Elegant fonts
+\ifxetex
+  \setmainfont{TeX Gyre Termes} % Times-like font
+  \setsansfont{TeX Gyre Heros}
+  \setmonofont{TeX Gyre Cursor}
+\else\ifluatex
+  \setmainfont{TeX Gyre Termes}
+  \setsansfont{TeX Gyre Heros}
+  \setmonofont{TeX Gyre Cursor}
+\fi\fi
+
+% Microtypography
+\usepackage{microtype}
+
+% Page layout
+\usepackage[
+  top=1.2in,
+  bottom=1.2in,
+  left=1.25in,
+  right=1.25in,
+  headheight=15pt
+]{geometry}
+
+% Line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Section formatting
+\usepackage{titlesec}
+
+% Main sections - Roman numerals, centered
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\centering}
+  {\thesection.}
+  {1em}
+  {}
+
+% Subsections
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection.}
+  {1em}
+  {}
+
+% Colors
+\usepackage[dvipsnames]{xcolor}
+\definecolor{biblequote}{RGB}{102,51,102}
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Quotes
+\usepackage{csquotes}
+
+% Environment for biblical quotes
+\newenvironment{biblequote}
+  {\begin{quote}\itshape\color{biblequote}}
+  {\end{quote}}
+
+% Command for short biblical quotes
+\newcommand{\bq}[1]{\textit{\color{biblequote}#1}}
+
+% Section separator
+\newcommand{\sectionbreak}{%
+  \begin{center}
+    \vspace{1em}
+    \rule{0.3\textwidth}{0.4pt}
+    \vspace{1em}
+  \end{center}
+}
+
+% First paragraph after section without indent
+\usepackage{indentfirst}
+\setlength{\parindent}{1.5em}
+
+% Drop caps for first letter
+\usepackage{lettrine}
+\renewcommand{\LettrineFontHook}{\bfseries}
+
+% Hyperlinks (invisible in PDF)
+\usepackage[
+  colorlinks=false,
+  pdfborder={0 0 0},
+  unicode=true
+]{hyperref}
+
+% Document metadata
+$if(title)$
+\title{%
+  \vspace{-1in}
+  {\LARGE\bfseries $title$}
+  $if(subtitle)$\\[0.5cm]
+  {\large\itshape $subtitle$}
+  $endif$
+  \vspace{0.3in}
+}
+$endif$
+
+$if(author)$
+\author{\large $author$}
+$endif$
+
+$if(date)$
+\date{$date$}
+$else$
+\date{\today}
+$endif$
+
+% Begin document
+\begin{document}
+
+% Title page
+$if(title)$
+\maketitle
+\thispagestyle{empty}
+\newpage
+$endif$
+
+% Table of contents (optional)
+$if(toc)$
+\tableofcontents
+\newpage
+$endif$
+
+% Document body
+$body$
+
+\end{document}
