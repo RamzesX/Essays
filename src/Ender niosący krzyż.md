@@ -81,3 +81,9 @@ Krzyż Endera wisi teraz między gwiazdami jako memento: pamiętajcie, co potraf
 *"Przebacz im, bo nie wiedzą co czynią"* – te słowa, wypowiedziane dwa tysiące lat temu nad Jerozolimą, odbijają się echem w próżni kosmicznej. Dotyczą Endera, dotyczą nas, dotyczą każdego, kto stanie przed Obcym z bronią lub wyciągniętą ręką w dłoni.
 
 Wybór należy do nas. Ale przynajmniej teraz – dzięki Enderowi niosącemu swój krzyż – wiemy, co czynimy.
+
+\vspace{2em}
+
+\begin{center}
+\textit{O'r Annwn dwfn, trwy wybodaeth, fe godwn ni}
+\end{center}

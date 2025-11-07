@@ -3,7 +3,12 @@
     "allow": [
       "Bash(cmd /c dir output*.pdf)",
       "Bash(awk '{print $9, \"\"\"\"(\"\"\"\" $5/1024 \"\"\"\"KB)\"\"\"\"}')",
-      "WebSearch"
+      "WebSearch",
+      "Bash(if not exist \"C:\\Users\\Norbert\\IdeaProjects\\Eseje\\output\" mkdir \"C:\\Users\\Norbert\\IdeaProjects\\Eseje\\output\")",
+      "Bash(cmd /c \"if not exist output mkdir output\")",
+      "Bash(cmd /c \"pandoc \"\"src/Raport Ryzyka WPT.md\"\" -o \"\"output/Raport_Ryzyka_WPT.pdf\"\" --metadata-file=raport-wpt-config.yaml\")",
+      "Bash(pandoc:*)",
+      "Bash(cmd /c dir outputEnder*.pdf)"
     ],
     "deny": [],
     "ask": []

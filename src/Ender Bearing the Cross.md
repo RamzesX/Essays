@@ -81,3 +81,9 @@ Ender's cross now hangs among the stars as a memento: remember what you can do i
 *"Forgive them, for they know not what they do"* – these words, spoken two thousand years ago over Jerusalem, echo in the cosmic void. They apply to Ender, to us, to everyone who will stand before the Other with a weapon or an outstretched hand.
 
 The choice is ours. But at least now – thanks to Ender bearing his cross – we know what we do.
+
+\vspace{2em}
+
+\begin{center}
+\textit{O'r Annwn dwfn, trwy wybodaeth, fe godwn ni}
+\end{center}
