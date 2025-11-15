@@ -8,7 +8,11 @@
       "Bash(cmd /c \"if not exist output mkdir output\")",
       "Bash(cmd /c \"pandoc \"\"src/Raport Ryzyka WPT.md\"\" -o \"\"output/Raport_Ryzyka_WPT.pdf\"\" --metadata-file=raport-wpt-config.yaml\")",
       "Bash(pandoc:*)",
-      "Bash(cmd /c dir outputEnder*.pdf)"
+      "Bash(cmd /c dir outputEnder*.pdf)",
+      "Bash(cmd /c \"pandoc \"\"src/Quantum Sword.md\"\" -o \"\"output/Quantum_Sword.pdf\"\" --metadata-file=quantum-sword-config.yaml\")",
+      "Bash(cmd /c dir outputQuantum*.pdf)",
+      "Bash(cmd /c \"dir output\\*.pdf /b\")",
+      "Bash(cmd /c \"dir output\\Quantum_Sword.pdf\")"
     ],
     "deny": [],
     "ask": []
