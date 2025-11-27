@@ -16,7 +16,11 @@
       "Bash(cmd /c dir \"output\\When_One_Became_Two.pdf\")",
       "Bash(cmd /c:*)",
       "Bash(powershell -Command:*)",
-      "Bash(nul)"
+      "Bash(nul)",
+      "WebFetch(domain:www.x-kom.pl)",
+      "WebFetch(domain:www.morele.net)",
+      "mcp__neo4j-cypher__kg-write_neo4j_cypher",
+      "mcp__neo4j-cypher__kg-read_neo4j_cypher"
     ],
     "deny": [],
     "ask": []
